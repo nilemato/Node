@@ -39,6 +39,9 @@ router.post("/", (req, res) => {
  res.writeHead(httpStatusCodes.OK, plainTextContentType);
  res.end("POSTED");
 });
+router.post('./placeholderURL', function doSMTH(){
+    console.log('Something done');
+})
 http.createServer(router.handle).listen(3000);
 console.log(`The server is listening on port number:
 ➥ ${port}`);
